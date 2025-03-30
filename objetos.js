@@ -63,36 +63,3 @@ let objeto4 = {
 };
 //objeto4 = {a: 1, b: 2}
 
-//constructor functions
-function Book (name, authors, publishedYear) {
-        this.name = name;                       //definir propiedades
-        this.authors = authors;
-        this.publishedYear = publishedYear;
-        this.fullName = function () {
-            return this.name + "by" + this.authors + ". " + publishedYear;
-        };
-    }
-
-thisBook = new Book("Coding in React", ["Enrique Molinari"], 2021);
-
-thisBook.fullName(); //Coding in React by Enrique Molinari 2021
-
-archBook = new Book ("Coding an Architecture Style", ["Enrique Molinari"], 2020);
-
-archBook.fullName(); //Coding an Architecture Style by Enrique Molinari, 2020
-
-
-//objeto literal que modlela los datos de una tarjeta
-function Tarjeta(name, surname, codigo){
-    this.name = name;
-    this.surname = surname;
-    this.codigo = codigo;
-    this.fullInfo = function (){
-        return "nombre: " + this.name + ". " + "apellido: "+ this.surname + ". " + this.codigo;
-    }
-}
-unaTarjeta = new Tarjeta("Maria", "Perez", "123 345 345");
-
-infoTarjeta = unaTarjeta.fullInfo();
-
-console.log(infoTarjeta);
